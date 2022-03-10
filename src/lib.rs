@@ -176,7 +176,7 @@ pub fn formatted_builder() -> Builder {
 
         writeln!(
             f,
-            " {} {} > {}",
+            "{} {} > {}",
             level,
             target,
             record.args(),
