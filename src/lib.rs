@@ -248,10 +248,10 @@ fn max_target_width(target: &str) -> usize {
 
 fn colored_level<'a>(style: &'a mut Style, level: Level) -> StyledValue<'a, &'static str> {
     match level {
-        Level::Trace => style.set_color(Color::Magenta).value("TRACE"),
-        Level::Debug => style.set_color(Color::Blue).value("DEBUG"),
-        Level::Info => style.set_color(Color::Green).value("INFO "),
-        Level::Warn => style.set_color(Color::Yellow).value("WARN "),
-        Level::Error => style.set_color(Color::Red).value("ERROR"),
+        Level::Trace => style.set_color(Color::Magenta).set_bold(true).value("trace:"),
+        Level::Debug => style.set_color(Color::Blue).set_bold(true).value("debug:"),
+        Level::Info => style.set_color(Color::Green).set_bold(true).value("info:"),
+        Level::Warn => style.set_color(Color::Yellow).set_bold(true).value("warn:"),
+        Level::Error => style.set_color(Color::Red).set_bold(true).value("error:"),
     }
 }
