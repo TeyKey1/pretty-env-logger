@@ -212,7 +212,7 @@ pub fn formatted_timed_builder() -> Builder {
 
         writeln!(
             f,
-            " {} {} {} > {}",
+            "{} {} {} > {}",
             time,
             level,
             target,
